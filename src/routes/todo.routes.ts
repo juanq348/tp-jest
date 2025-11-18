@@ -39,5 +39,9 @@ export function buildTodoRouter(service: TodoService): Router {
     }
   });
 
+  router.get("/stats", (_req, res) => {
+    res.json(service.stats());
+  })
+
   return router;
 }
